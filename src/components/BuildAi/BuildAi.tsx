@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import SectionHeader from '../SectionHeader/SectionHeader';
 import Button from '../Button/Button';
+import rlhfImg from '../../img/rlhfImg.png';
+import dataCuration from '../../img/data-curation.png';
 
 const BuildAi = () => {
   const [activeLabel, setActiveLabel] = useState('3D');
@@ -19,7 +21,9 @@ const BuildAi = () => {
         />
         <div className="grid gap-40">
           <div className="grid md:grid-cols-2 grid-cols-1 items-center justify-center gap-8">
-            <div className="bg-red-300 rounded-md h-[240px]"></div>
+            <div className="rounded-md ">
+              <img src={rlhfImg.src} alt="rlhf" />
+            </div>
             <div>
               <h3 className="text-3xl xl:text-4xl mb-2 text-white">RLHF</h3>
               <p>Powering the next generation of Generative AI</p>
@@ -60,7 +64,9 @@ const BuildAi = () => {
             </div>
           </div>
           <div className="grid md:grid-cols-2 grid-cols-1 items-center justify-center gap-8">
-            <div className="bg-red-300 rounded-md h-[240px]"></div>
+            <div className="rounded-md">
+              <img src={dataCuration.src} alt="rlhf" />
+            </div>
             <div>
               <h3 className="text-3xl xl:text-4xl mb-2 text-white">Data Curation</h3>
               <p>Unearth the most valuable data by intelligently managing your dataset</p>
