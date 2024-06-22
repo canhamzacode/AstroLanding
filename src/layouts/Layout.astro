@@ -1,0 +1,28 @@
+---
+import Header from '../components/Header.astro';
+import "../../src/styles/index.css"
+interface Props {
+	title: string;
+	description?: string;
+	image?: string;
+}
+
+const { title, description = "A community of music producers and enthusisats", image = "/images/band.jpeg" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<meta property="og:image" content={image} />
+		<title>{title}</title>
+	</head>
+	<body class="min-h-screen bg-black text-white">
+		<Header />
+		<slot />
+	</body>
+</html>

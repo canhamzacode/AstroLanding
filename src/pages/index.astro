@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Hero from '../components/Hero.astro';
+import Partners from '../components/Partners/Partners';
+import TechTalk from "../components/TechTalk/TechTalk"
+import AiArchitecture from '../components/AiArchitecture/AiArchitecture';
+import UseCase from "../components/UseCase/UseCase";
+import BuildAi from '../components/BuildAi/BuildAi';
+import GenerativeAi from '../components/GenerativeAi/GenerativeAi';
+import CaseStudy from '../components/CaseStudy/CaseStudy';
+import Customers from '../components/Customers/Customers';
+import ClosingHero from "../components/ClosingHero.astro";
+import Footer from "../components/Footer/Footer"
+---
+
+<Layout title="Welcome to Astro.">
+	<Hero />
+	<Partners client:load />
+	<TechTalk />
+	<AiArchitecture />
+	<UseCase client:load />
+	<BuildAi client:load />
+	<GenerativeAi />
+	<CaseStudy />
+	<Customers client:load />
+	<ClosingHero />
+	<Footer />
+</Layout>

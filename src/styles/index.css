@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* --color-primary: #ea4335; */
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+.container {
+  @apply w-full mx-auto max-w-[1200px];
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+ul li {
+  @apply px-2 md:px-4;
+}
+
+.btn-color {
+  background: radial-gradient(231.94% 231.94% at 50% 100%, #8a6cff 0, rgba(53, 41, 128, 0) 25.24%),
+    linear-gradient(180deg, rgba(243, 238, 255, 0), rgba(243, 238, 255, 0.04)),
+    rgba(147, 130, 255, 0.01);
+  box-shadow: 0 0 0 0 rgba(16, 0, 51, 0.4), 0 2px 5px 0 rgba(16, 0, 51, 0.39),
+    0 8px 8px 0 rgba(16, 0, 51, 0.34), 0 19px 11px 0 rgba(16, 0, 51, 0.2),
+    0 34px 14px 0 rgba(16, 0, 51, 0.06), 0 53px 15px 0 rgba(16, 0, 51, 0.01),
+    inset 0 0 12px 0 hsla(0, 0%, 100%, 0.08), inset 0 -8px 32px 0 #1e0d49;
+  color: #f4f0ff;
+}
+
+.custom-text {
+  display: inline-block;
+  transition: transform 0.5s;
+  background: linear-gradient(50deg, #714dff, #9c83ff 31.28%, #e151ff 77.97%, #fff759 95.64%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.box_box__wrapper__7yWdR.box_box-blue__FPEs4:after {
+  background: hsla(0, 0%, 100%, 0.002);
+  box-shadow: inset 0 1px 1px rgba(199, 211, 234, 0.12), inset 0 24px 48px rgba(199, 211, 234, 0.05);
+}
+
+.customImg {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  filter: contrast(0) brightness(100);
+  margin: auto;
+  transition: opacity 0.3s ease;
+}
+
+.customImg.active {
+  opacity: 1;
+}
+
+.customImg.inactive {
+  opacity: 0.2;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}

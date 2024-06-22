@@ -1,0 +1,19 @@
+---
+import heroBg from "../img/hero-bg.webp";
+import Image from "astro/components/Image.astro";
+import TextRotator from "./TextRotator/TextRotator";
+import Button from "./Button/Button";
+---
+<section class="container min-h-[70vh] py-4 grid text-center items-center justify-center relative gap-3">
+    <h1 class="text-5xl font-light sm:leading-none leading-[1.1] sm:text-7xl xl:text-[89px] tracking-[-0.89px] font-aeonik text-center">
+        Power <TextRotator client:load /> <br> With Your Data
+    </h1>
+    <p class="md:my-6 my-2 font-sans text-base text-[#F5F5F5] sm:px-0 font-medium leading-normal lg:my-[22px] lg:text-lg md:w-11/12 lg:w-full text-center lg:max-w-[800px] mx-auto">Make the best models with the best data. Scale Data Engine leverages your enterprise data, and with Scale GenAI Platform, safely unlocks the value of AI.</p>
+    <div class="flex items-center justify-center w-full gap-5">
+        <Button text="Book a Demo" />
+        <p>Build AI →</p>
+    </div>
+    <div class="absolute -z-10 w-full">
+        <Image class="mx-auto" src={heroBg} alt="hero Bg" />
+    </div>
+</section>

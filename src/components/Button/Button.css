@@ -1,0 +1,5 @@
+.bg-effect {
+  background: radial-gradient(231.94% 231.94% at 50% 100%, #8a6cff 0, rgba(53, 41, 128, 0) 25.24%),
+    linear-gradient(180deg, rgba(243, 238, 255, 0), rgba(243, 238, 255, 0.04)),
+    rgba(147, 130, 255, 0.01);
+}
