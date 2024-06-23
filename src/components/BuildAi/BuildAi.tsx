@@ -13,7 +13,7 @@ const BuildAi = () => {
 
   return (
     <div className="container">
-      <div className="py-18 lg:py-20 bg-transparent relative">
+      <div className="py-16 lg:py-20 bg-transparent relative">
         <SectionHeader
           info="BUILD AI"
           title="Scale Data Engine"
@@ -39,18 +39,20 @@ const BuildAi = () => {
             <div>
               <h3 className="text-3xl xl:text-4xl mb-2 text-white">Data Labeling</h3>
               <p>The best quality data to fuel the best performing models</p>
-              <div className="w-full border border-white rounded-[50px] min-h-[45px] grid grid-cols-5 items-center gap-3 mt-5 p-2">
-                {['3D', 'Image', 'Mapping', 'Text', 'Audio'].map((label, index) => (
-                  <button
-                    key={label}
-                    className={`h-full w-full rounded-[50px] p-2 border ${
-                      activeLabel === label ? 'border-white' : 'border-transparent'
-                    } ${index !== 4 ? 'border-r' : ''}`}
-                    onClick={() => handleLabelClick(label)}
-                  >
-                    {label}
-                  </button>
-                ))}
+              <div className="w-full  overflow-x-auto disableScroll">
+                <div className="w-full border border-white rounded-[50px] min-h-[45px] min-w-[420px] flex items-center mt-5 p-2">
+                  {['3D', 'Image', 'Mapping', 'Text', 'Audio'].map((label, index) => (
+                    <button
+                      key={label}
+                      className={`h-full w-full rounded-[50px] p-2 border ${
+                        activeLabel === label ? 'border-white' : 'border-transparent'
+                      } ${index !== 4 ? 'border-r' : ''}`}
+                      onClick={() => handleLabelClick(label)}
+                    >
+                      {label}
+                    </button>
+                  ))}
+                </div>
               </div>
               <p className="my-8 text-[#F5F5F5]">
                 Scale has pioneered in the data labeling industry by combining AI-based techniques

@@ -6,7 +6,7 @@ import { GenerativeAiData } from './GenerativeAiData';
 const GenerativeAi = () => {
   return (
     <div className="container">
-      <div className="py-18 lg:py-20 bg-transparent pb-0 lg:pb-0">
+      <div className="py-16 lg:py-20 bg-transparent pb-0 lg:pb-0">
         <SectionHeader
           info="APPLY AI"
           title="Generative AI Applications"

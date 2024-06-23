@@ -15,6 +15,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
+  transition: all ease-in-out;
 }
 .container {
   @apply w-full mx-auto max-w-[1200px];
@@ -51,8 +52,6 @@ ul li {
 }
 
 .customImg {
-  width: 80px;
-  height: 80px;
   object-fit: contain;
   filter: contrast(0) brightness(100);
   margin: auto;
@@ -71,4 +70,8 @@ ul,
 li {
   margin: 0;
   padding: 0;
+}
+
+.disableScroll::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
 }

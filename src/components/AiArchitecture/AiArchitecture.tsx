@@ -5,7 +5,7 @@ import SectionHeader from '../SectionHeader/SectionHeader';
 
 const AiArchitecture = () => {
   return (
-    <div className="py-38 lg:py-20 lg:pb-8">
+    <div className="py-16 lg:py-20 lg:pb-8">
       <SectionHeader
         info="AI FOR THE ENTERPRISE"
         title="Generative AI Architecture"

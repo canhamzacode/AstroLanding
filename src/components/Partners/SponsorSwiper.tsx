@@ -18,7 +18,7 @@ const SponsorsSwiper: React.FC<SponsorsSwiperProps> = ({ allSponsors }) => {
     <div className="w-full mb-4 md:hidden">
       <Swiper
         spaceBetween={20}
-        slidesPerView={5}
+        slidesPerView={3.5}
         autoplay={{ delay: 2000, disableOnInteraction: false }}
         modules={[Autoplay]}
         breakpoints={{
@@ -32,14 +32,14 @@ const SponsorsSwiper: React.FC<SponsorsSwiperProps> = ({ allSponsors }) => {
             slidesPerView: 8
           }
         }}
-        className="flex items-center justify-center h-[35px]"
+        className="flex items-center justify-center h-[55px]"
       >
         {allSponsors.map((sponsor, index) => (
           <SwiperSlide key={index} className="flex items-center justify-center h-full">
             <div
               className="flex items-center justify-center p-2"
               style={{
-                height: '35px'
+                height: '55px'
               }}
             >
               <img

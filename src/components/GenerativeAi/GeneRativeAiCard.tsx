@@ -9,7 +9,7 @@ interface GeneRativeAiCardProp {
 
 const GeneRativeAiCard = ({ img, info, title, description }: GeneRativeAiCardProp) => {
   return (
-    <div className="pt-12 px-12 border-2 border-neutral-800  rounded-2xl">
+    <div className="md:pt-12 pt-6 md:px-12 px-6 border-2 border-neutral-800 rounded-2xl">
       <p className="uppercase leading-4 text-xs tracking-[4px] mb-4 lg:mb-6 z-10 relative">
         {info}
       </p>

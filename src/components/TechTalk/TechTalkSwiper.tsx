@@ -28,7 +28,7 @@ const TechTalkSwiper = () => {
         {providerImg.map((data, index) => (
           <SwiperSlide key={index} className="flex items-center justify-center">
             <div
-              className="border border-white/15 rounded-2xl flex items-center justify-center p-7 h-32"
+              className="border border-white/15 rounded-2xl flex items-center justify-center md:p-7 p-3 h-32"
               style={{
                 minHeight: '8rem',
                 maxHeight: '8rem'

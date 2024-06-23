@@ -35,7 +35,7 @@ const Customers = () => {
 
   return (
     <div className="container">
-      <div className="py-18 lg:py-20 bg-transparent pb-0 lg:pb-0">
+      <div className="py-16 lg:py-20 bg-transparent pb-0 lg:pb-0">
         <SectionHeader
           info="CUSTOMERS"
           title="We have changed the game of AI data—hear it from our customers."
@@ -49,13 +49,13 @@ const Customers = () => {
           role={currentCustomer.role}
         />
       </div>
-      <div className="grid grid-cols-5 mt-10">
+      <div className=" md:flex hidden justify-between items-center mt-10">
         {images.map((image, index) => (
           <button key={index} onClick={() => handleImageClick(index)}>
             <img
               src={image.src}
               alt={image.alt}
-              className={`customImg ${index === currentIndex ? 'active' : 'inactive'}`}
+              className={`customImg w-[50px] ${index === currentIndex ? 'active' : 'inactive'}`}
             />
           </button>
         ))}

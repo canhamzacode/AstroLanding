@@ -6,7 +6,7 @@ interface ButtonProps {
 
 const Button = ({ text }: ButtonProps) => {
   return (
-    <button className="btn-color flex gap-2 hover:gap-4 transition-all hover:bg-[#cf58fa] text-center rounded-lg py-2 px-4">
+    <button className="btn-color flex gap-2 hover:gap-[9px] transition-all hover:bg-[#cf58fa] text-center rounded-lg py-2 px-4">
       {text} <span>→</span>
     </button>
   );

@@ -8,7 +8,7 @@ import { CaseStudyData } from './CaseStudyData';
 const CaseStudy = () => {
   return (
     <div className="container">
-      <div className="py-18 lg:py-20 bg-transparent pb-0 lg:pb-0">
+      <div className="py-16 lg:py-20 bg-transparent pb-0 lg:pb-0">
         <SectionHeader
           info="LEARN HOW WE SERVE ENTERPRISES LARGE AND SMALL"
           title="Case Studies & Resources"
