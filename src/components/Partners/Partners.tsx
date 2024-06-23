@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
 
 import microsoft from '../../img/microsoft.png';
@@ -66,6 +64,17 @@ const Partners: React.FC = () => {
       ...sponsors.Enterprises
     ];
     setAllSponsors(combinedSponsors);
+
+    const interval = setInterval(() => {
+      setActiveCategory((prevCategory) => {
+        const currentIndex = partnerCategories.indexOf(prevCategory);
+        const nextIndex = (currentIndex + 1) % partnerCategories.length;
+        return partnerCategories[nextIndex];
+      });
+    }, 5000);
+
+    // Clean up the interval on component unmount
+    return () => clearInterval(interval);
   }, []);
 
   const changeActiveCategory = (category: PartnerCategory) => {
@@ -83,7 +92,7 @@ const Partners: React.FC = () => {
               className={`category-button ${activeCategory === category ? 'active' : ''}`}
               onClick={() => changeActiveCategory(category)}
             >
-              {category}
+              {category},
             </button>
           ))}
         </p>
