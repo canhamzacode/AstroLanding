@@ -48,3 +48,46 @@
   -webkit-text-fill-color: transparent;
   animation: auto-scroll 15s infinite;
 }
+
+@media screen and (max-width: 610px) {
+  .custom-text {
+    height: full;
+  }
+
+  .inner-headings {
+    height: 1.1em;
+  }
+
+  @keyframes auto-scroll {
+    0% {
+      transform: translateY(0);
+    }
+    5% {
+      transform: translateY(0);
+    }
+    10% {
+      transform: translateY(-1.1em);
+    }
+    30% {
+      transform: translateY(-1.1em);
+    }
+    35% {
+      transform: translateY(-2.1em);
+    }
+    55% {
+      transform: translateY(-2.1em);
+    }
+    60% {
+      transform: translateY(-3.2em);
+    }
+    80% {
+      transform: translateY(-3.2em);
+    }
+    85% {
+      transform: translateY(-4.25em);
+    }
+    100% {
+      transform: translateY(-4.25em);
+    }
+  }
+}
