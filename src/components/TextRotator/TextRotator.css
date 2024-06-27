@@ -1,39 +1,9 @@
 .inner-headings {
   position: relative;
-  height: 1em;
+  height: 1em; /* This will be dynamically set by JavaScript */
   overflow: hidden;
   display: flex;
   flex-direction: column;
-}
-
-@keyframes auto-scroll {
-  0% {
-    transform: translateY(0);
-  }
-  20% {
-    transform: translateY(0);
-  }
-  25% {
-    transform: translateY(-1em);
-  }
-  45% {
-    transform: translateY(-1em);
-  }
-  50% {
-    transform: translateY(-2em);
-  }
-  70% {
-    transform: translateY(-2em);
-  }
-  75% {
-    transform: translateY(-3em);
-  }
-  95% {
-    transform: translateY(-3em);
-  }
-  100% {
-    transform: translateY(-3em);
-  }
 }
 
 .custom-text {
@@ -42,45 +12,11 @@
   background: linear-gradient(50deg, #714dff, #9c83ff 31.28%, #e151ff 77.97%, #fff759 95.64%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: auto-scroll 10s infinite;
 }
 
+/* You can add a general media query if needed, but the specific animation will be handled by JavaScript */
 @media screen and (max-width: 610px) {
-  .custom-text {
-    height: full;
-  }
-
   .inner-headings {
-    height: 1.1em;
-  }
-
-  @keyframes auto-scroll {
-    0% {
-      transform: translateY(0);
-    }
-    20% {
-      transform: translateY(0);
-    }
-    25% {
-      transform: translateY(-1.1em);
-    }
-    45% {
-      transform: translateY(-1.1em);
-    }
-    50% {
-      transform: translateY(-2.2em);
-    }
-    70% {
-      transform: translateY(-2.2em);
-    }
-    75% {
-      transform: translateY(-3.3em);
-    }
-    95% {
-      transform: translateY(-3.3em);
-    }
-    100% {
-      transform: translateY(-3.3em);
-    }
+    height: 1.1em; /* This will be dynamically set by JavaScript */
   }
 }
