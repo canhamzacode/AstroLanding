@@ -38,7 +38,7 @@ ul li {
   color: #f4f0ff;
 }
 
-.custom-text {
+.global-custom-text {
   display: inline-block;
   transition: transform 0.5s;
   background: linear-gradient(50deg, #714dff, #9c83ff 31.28%, #e151ff 77.97%, #fff759 95.64%);
