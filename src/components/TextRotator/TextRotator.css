@@ -10,43 +10,39 @@
   0% {
     transform: translateY(0);
   }
-  5% {
+  20% {
     transform: translateY(0);
   }
-  10% {
+  25% {
     transform: translateY(-1em);
   }
-  30% {
+  45% {
     transform: translateY(-1em);
   }
-  35% {
+  50% {
     transform: translateY(-2em);
   }
-  55% {
+  70% {
     transform: translateY(-2em);
   }
-  60% {
+  75% {
     transform: translateY(-3em);
   }
-  80% {
+  95% {
     transform: translateY(-3em);
-  }
-  85% {
-    transform: translateY(-4em);
   }
   100% {
-    transform: translateY(-4em);
+    transform: translateY(-3em);
   }
 }
 
 .custom-text {
-  /* display: inline-block; */
   padding-left: 5px;
   transition: transform 0.5s;
   background: linear-gradient(50deg, #714dff, #9c83ff 31.28%, #e151ff 77.97%, #fff759 95.64%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: auto-scroll 15s infinite;
+  animation: auto-scroll 10s infinite;
 }
 
 @media screen and (max-width: 610px) {
@@ -62,32 +58,29 @@
     0% {
       transform: translateY(0);
     }
-    5% {
+    20% {
       transform: translateY(0);
     }
-    10% {
+    25% {
       transform: translateY(-1.1em);
     }
-    30% {
+    45% {
       transform: translateY(-1.1em);
     }
-    35% {
-      transform: translateY(-2.1em);
+    50% {
+      transform: translateY(-2.2em);
     }
-    55% {
-      transform: translateY(-2.1em);
+    70% {
+      transform: translateY(-2.2em);
     }
-    60% {
-      transform: translateY(-3.2em);
+    75% {
+      transform: translateY(-3.3em);
     }
-    80% {
-      transform: translateY(-3.2em);
-    }
-    85% {
-      transform: translateY(-4.25em);
+    95% {
+      transform: translateY(-3.3em);
     }
     100% {
-      transform: translateY(-4.25em);
+      transform: translateY(-3.3em);
     }
   }
 }
