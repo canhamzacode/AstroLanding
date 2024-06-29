@@ -1,0 +1,18 @@
+---
+import TechTalkCard from './TechTalkCard.astro';
+import { TechTalkData } from './TechTalkData';
+---
+
+<div class="w-full mx-auto container flex items-center gap-4 overflow-x-scroll scrollbar-hide my-14">
+  <div class="flex space-x-4">
+    {TechTalkData.map(async (data, index) => {
+      return (
+        <TechTalkCard
+          description={data.description}
+          img={data.img}
+          name={data.name}
+        />
+      );
+    })}
+  </div>
+</div>

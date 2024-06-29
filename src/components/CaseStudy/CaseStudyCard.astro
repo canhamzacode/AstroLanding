@@ -1,0 +1,15 @@
+---
+import { Image } from "astro:assets";
+
+const {title, info, img} = Astro.props;
+---
+
+<div class="relative w-[400px] bg-[#D1AAD7]/[0.01] flex-shrink-0">
+    <div class="w-full h-[250px]">
+        <Image src={img} alt={title} class="w-ful h-full" />
+    </div>
+    <div class="pt-6">
+      <p class="text-sm font-medium leading-[1.71] text-[#D1AAD7]">{info}</p>
+      <h5 class="line-clamp-2 text-2xl font-aeonik leading-[1.33] mt-1">{title}</h5>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+---
+import BuildAiWrapper from './BuildAiWrapper';
+import { Image } from 'astro:assets';
+import dataCuration from "../../img/data-curation.png";
+import rlhfImg from "../../img/rlhfImg.png";
+
+---
+
+<BuildAiWrapper>
+  <div slot="rlhfImage">
+    <Image src={rlhfImg} alt="rlhf" width={500} height={300} />
+  </div>
+  <div slot="dataCuration">
+    <Image src={dataCuration} alt="data curation" width={500} height={300} />
+  </div>
+</BuildAiWrapper>

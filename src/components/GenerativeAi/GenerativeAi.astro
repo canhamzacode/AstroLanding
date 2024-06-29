@@ -1,0 +1,27 @@
+---
+import SectionHeader from '../SectionHeader/SectionHeader';
+import GeneRativeAiCard from './GenerativeAiCard.astro';
+import { GenerativeAiData } from './GenerativeAiData';
+---
+
+
+<div class="container">
+    <div class="py-16 lg:py-20 bg-transparent pb-0 lg:pb-0">
+      <SectionHeader
+        info="APPLY AI"
+        title="Generative AI Applications"
+        description="Easily Apply AI to your most challenging use cases with pre‑built applications that harness the power of customized LLMs."
+        customColor="text-[#7B8FDD]"
+      />
+    </div>
+    <div class="grid gap-6 md:grid-cols-2 grid-cols-1">
+      {GenerativeAiData.map((data, index) => (
+        <GeneRativeAiCard
+          description={data.description}
+          img={data.image}
+          title={data.title}
+          info={data.info}
+        />
+      ))}
+    </div>
+  </div>

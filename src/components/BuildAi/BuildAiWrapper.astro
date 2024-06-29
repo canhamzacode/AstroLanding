@@ -1,0 +1,68 @@
+---
+import Button from "../Button/Button";
+import SectionHeader from "../SectionHeader/SectionHeader";
+
+
+---
+
+<div class="container">
+    <div class="py-16 lg:py-20 bg-transparent relative">
+      <SectionHeader
+        info="BUILD AI"
+        title="Scale Data Engine"
+        description="For AI teams, Scale Data Engine improves your models by improving your data."
+      />
+      <div class="grid gap-40">
+        <div class="grid md:grid-cols-2 grid-cols-1 items-center justify-center gap-8">
+          <div class="rounded-md ">
+            <slot name="rlhfImage"></slot>
+          </div>
+          <div>
+            <h3 class="text-3xl xl:text-4xl mb-2 text-white">RLHF</h3>
+            <p>Powering the next generation of Generative AI</p>
+            <p class="my-8 text-[#F5F5F5]">
+              Scale Generative AI Data Engine powers the most advanced LLMs and generative models
+              in the world through world-class RLHF, data generation, model evaluation, safety,
+              and alignment.
+            </p>
+            <Button text="Label My Data" />
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 grid-cols-1 items-center justify-center gap-8">
+          <div>
+            <h3 class="text-3xl xl:text-4xl mb-2 text-white">Data Labeling</h3>
+            <p>The best quality data to fuel the best performing models</p>
+            <div class="w-full  overflow-x-auto disableScroll">
+                <slot name="dataLabeling"></slot>
+             
+            </div>
+            <p class="my-8 text-[#F5F5F5]">
+              Scale has pioneered in the data labeling industry by combining AI-based techniques
+              with human-in-the-loop, delivering labeled data at unprecedented quality,
+              scalability, and efficiency.
+            </p>
+            <Button text="Label My Data" />
+          </div>
+          <div class="bg-red-300 rounded-md h-[240px] flex items-center justify-center">
+            <slot name="activeLabel"></slot>
+            <!-- <p>{activeLabel}</p> -->
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 grid-cols-1 items-center justify-center gap-8">
+          <div class="rounded-md">
+            <slot name="dataCuration"></slot>
+          </div>
+          <div>
+            <h3 class="text-3xl xl:text-4xl mb-2 text-white">Data Curation</h3>
+            <p>Unearth the most valuable data by intelligently managing your dataset</p>
+            <p class="my-8 text-[#F5F5F5]">
+              Scale’s suite of dataset management, testing, model evaluation, and model comparison
+              tools enable you to “label what matters.” Maximize the value of your labeling budget
+              by identifying the highest value data to label, even without ground truth labels.
+            </p>
+            <Button text="Curate My Data" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -2,12 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import Partners from '../components/Partners/Partners';
-import TechTalk from "../components/TechTalk/TechTalk"
+import TechTalk from "../components/TechTalk/TechTalk.astro"
 import AiArchitecture from '../components/AiArchitecture/AiArchitecture';
 import UseCase from "../components/UseCase/UseCase";
-import BuildAi from '../components/BuildAi/BuildAi';
-import GenerativeAi from '../components/GenerativeAi/GenerativeAi';
-import CaseStudy from '../components/CaseStudy/CaseStudy';
+import BuildAi from '../components/BuildAi/BuildAi.astro';
+import GenerativeAi from '../components/GenerativeAi/GenerativeAi.astro';
+import CaseStudy from '../components/CaseStudy/CaseStudy.astro';
 import Customers from '../components/Customers/Customers';
 import ClosingHero from "../components/ClosingHero.astro";
 import Footer from "../components/Footer/Footer"
@@ -19,7 +19,7 @@ import Footer from "../components/Footer/Footer"
 	<TechTalk />
 	<AiArchitecture />
 	<UseCase client:load />
-	<BuildAi client:load />
+	<BuildAi />
 	<GenerativeAi />
 	<CaseStudy />
 	<Customers client:load />
