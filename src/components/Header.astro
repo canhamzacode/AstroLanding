@@ -1,36 +1,60 @@
 ---
 import { Image } from "astro:assets";
 import Logo from "../img/sailLogo.webp";
+import cross from "../img/cross.svg";
 import { Icon } from 'astro-icon/components'
 import Button from "./Button/Button";
+import { navLinks } from "./data.ts";
 ---
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.3/dist/cdn.min.js" defer></script>
 
-<header
-    class="w-full bg-black "
->
-    <div class="w-full container py-4 flex items-center gap-6 md:px-8 px-4 text-base justify-center border-neutral-800 border-b">
-        <Image src={Logo} alt="A bird sitting on a nest of eggs." width={24} height={24} />
-        <p>Introducing the SEAL Leaderboards: the first truly expert-driven, trustworthy LLM contest.</p>
-        <p class="md:flex hidden">
-            See the Leaderboard <span>→</span>
-        </p>
+<header x-data="{ isOpen: false }" class="w-full bg-black">
+  <div class="w-full container py-4 flex items-center gap-6 md:px-8 px-4 text-base justify-center border-neutral-800 border-b">
+    <Image src={Logo} alt="A bird sitting on a nest of eggs." width={24} height={24} />
+    <p>Introducing the SEAL Leaderboards: the first truly expert-driven, trustworthy LLM contest.</p>
+    <p class="md:flex hidden">
+      See the Leaderboard <span>→</span>
+    </p>
+  </div>
+  <div class="container py-2 relative">
+    <div class="w-full flex items-center md:justify-center justify-between px-4 lg:justify-between h-14 lg:h-18">
+      <Icon name="scale" width={72} height={20} />
+      <ul class="md:flex hidden">
+        <li class="font-normal text-neutral-400 hover:text-white">Products</li>
+        <li class="font-normal text-neutral-400 hover:text-white">Government</li>
+        <li class="font-normal text-neutral-400 hover:text-white">Customers</li>
+        <li class="font-normal text-neutral-400 hover:text-white">Resources</li>
+      </ul>
+      <div class="md:flex hidden items-center gap-6">
+        <Button text={"Book a Demo"} />
+        <p>Login</p>
+      </div>
+      <button class="md:hidden flex" @click="isOpen = !isOpen">
+        <Icon name="bar" width={24} height={12} />
+      </button>
     </div>
-    <div class="container py-2">
-        <div class="w-full flex items-center md:justify-center justify-between px-4 lg:justify-between h-14 lg:h-18">
-            <Icon name="scale" width={72} height={20} />
-            <ul class="md:flex hidden">
-                <li class="font-normal text-neutral-400 hover:text-white">Products</li>
-                <li class="font-normal text-neutral-400 hover:text-white">Government</li>
-                <li class="font-normal text-neutral-400 hover:text-white">Customers</li>
-                <li class="font-normal text-neutral-400 hover:text-white">Resources</li>
-            </ul>
-            <div class="md:flex hidden items-center gap-6">
-                <Button text={"Book a Demo"} />
-                <p>Login</p>
+    <div x-show="isOpen" class="absolute grid z-50 bg-[#010001] top-0 left-[5%] w-[90%] gap-4 rounded-lg" @click.outside="isOpen = false">
+      <div class="full p-6 grid gap-5">
+        <button class="absolute flex items-center justify-center right-4 w-[30px] h-[30px] rounded-[50%] bg-neutral-400" @click="isOpen = false" >
+        <svg width="12" height="12" viewBox="0 0 12 12"><rect width="15.3125" height="1.48871" transform="matrix(0.701055 -0.713108 0.701055 0.713108 0 10.9385)" fill="#fff"></rect><rect width="15.3125" height="1.48871" transform="matrix(0.701055 0.713108 -0.701055 0.713108 1.26514 0)" fill="#fff"></rect></svg>
+        </button>
+        {navLinks.map(section => (
+          <div class="w-full">
+            <div class="flex items-center justify-between">
+              <h4 class="text-neutral-400 block uppercase text-xs tracking-wider">{section.title}</h4>
             </div>
-            <button class="md:hidden flex">
-                <Icon name="bar" width={24} height={12} />
-            </button>
-        </div>
+            <div class="grid grid-cols-2 gap-y-4 mt-4 pb-4 border-b border-neutral-800">
+              {section.items.map(item => (
+                <span class="block text-xs md:text-sm text-white">{item.name}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+      <div class="w-full h-[60px] bg-[#272726] flex gap-8 items-center justify-center rounded-b-xl">
+        <Button text={"Book a Demo"} />
+        <p>Login</p>
+      </div>
     </div>
+  </div>
 </header>
