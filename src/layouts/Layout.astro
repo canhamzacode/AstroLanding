@@ -1,7 +1,6 @@
 ---
 import Header from '../components/Header.astro';
 import "../../src/styles/index.css"
-import LabelProvider from '../context/LabelProvider';
 interface Props {
 	title: string;
 	description?: string;
@@ -21,11 +20,10 @@ const { title, description = "A community of music producers and enthusisats", i
 		<meta name="generator" content={Astro.generator} />
 		<meta property="og:image" content={image} />
 		<title>{title}</title>
+		<script is:inline type="module" src="../../src/index.ts"></script> 
 	</head>
 	<body class="min-h-screen bg-black text-white">
-		<LabelProvider client:load>
-			<Header />
-			<slot />
-		</LabelProvider>
+		<Header />
+		<slot />
 	</body>
 </html>
