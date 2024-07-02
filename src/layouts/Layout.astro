@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import "../../src/styles/index.css"
+import LabelProvider from '../context/LabelProvider';
 interface Props {
 	title: string;
 	description?: string;
@@ -22,7 +23,9 @@ const { title, description = "A community of music producers and enthusisats", i
 		<title>{title}</title>
 	</head>
 	<body class="min-h-screen bg-black text-white">
-		<Header />
-		<slot />
+		<LabelProvider client:load>
+			<Header />
+			<slot />
+		</LabelProvider>
 	</body>
 </html>

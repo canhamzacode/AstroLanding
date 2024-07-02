@@ -1,0 +1,20 @@
+---
+import { getImage } from "astro:assets";
+import analysis from '../../img/analysis.svg';
+import usAirForce from '../../img/usarmy.png';
+import amazon from '../../img/amazon.png';
+import toyota from '../../img/toyota.png';
+import salesForce from '../../img/salesforce.png';
+import Customers from "./Customers";
+
+const optimizedImages = await Promise.all([
+  getImage({ src: analysis }),
+  getImage({ src: usAirForce }),
+  getImage({ src: amazon }),
+  getImage({ src: toyota }),
+  getImage({ src: salesForce }),
+]);
+
+const imageUrls = optimizedImages.map(img => img.src);
+---
+<Customers client:load imageUrls={imageUrls} />

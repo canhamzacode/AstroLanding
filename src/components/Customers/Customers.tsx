@@ -1,22 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import SectionHeader from '../SectionHeader/SectionHeader';
 import CustomerCard from './CustomerCard';
 import { CustomerData } from './CustomerData';
-import analysis from '../../img/analysis.svg';
-import usAirForce from '../../img/usarmy.png';
-import amazon from '../../img/amazon.png';
-import toyota from '../../img/toyota.png';
-import salesForce from '../../img/salesforce.png';
 
-const Customers = () => {
+const Customers = ({ imageUrls }: { imageUrls: string[] }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % CustomerData.length);
-    }, 5000); // Switch every 5 seconds
+    }, 5000);
 
-    return () => clearInterval(intervalId); // Cleanup interval on component unmount
+    return () => clearInterval(intervalId);
   }, []);
 
   const currentCustomer = CustomerData[currentIndex];
@@ -24,14 +19,6 @@ const Customers = () => {
   const handleImageClick = (index: number) => {
     setCurrentIndex(index);
   };
-
-  const images = [
-    { src: analysis.src, alt: 'analysis' },
-    { src: usAirForce.src, alt: 'us airforce' },
-    { src: amazon.src, alt: 'amazon' },
-    { src: toyota.src, alt: 'toyota' },
-    { src: salesForce.src, alt: 'sales force' }
-  ];
 
   return (
     <div className="container">
@@ -50,11 +37,11 @@ const Customers = () => {
         />
       </div>
       <div className=" md:flex hidden justify-between items-center mt-10">
-        {images.map((image, index) => (
+        {imageUrls.map((image, index) => (
           <button key={index} onClick={() => handleImageClick(index)}>
             <img
-              src={image.src}
-              alt={image.alt}
+              src={image}
+              alt={image}
               className={`customImg w-[50px] ${index === currentIndex ? 'active' : 'inactive'}`}
             />
           </button>

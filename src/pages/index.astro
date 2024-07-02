@@ -4,13 +4,13 @@ import Hero from '../components/Hero.astro';
 import Partners from '../components/Partners/Partners';
 import TechTalk from "../components/TechTalk/TechTalk.astro"
 import AiArchitecture from '../components/AiArchitecture/AiArchitecture';
-import UseCase from "../components/UseCase/UseCase";
 import BuildAi from '../components/BuildAi/BuildAi.astro';
 import GenerativeAi from '../components/GenerativeAi/GenerativeAi.astro';
 import CaseStudy from '../components/CaseStudy/CaseStudy.astro';
-import Customers from '../components/Customers/Customers';
 import ClosingHero from "../components/ClosingHero.astro";
 import Footer from "../components/Footer/Footer"
+import UseCaseWrapper from '../components/UseCase/UseCaseWrapper.astro';
+import CustomersWrapper from '../components/Customers/CustomersWrapper.astro';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -18,11 +18,11 @@ import Footer from "../components/Footer/Footer"
 	<Partners client:load />
 	<TechTalk />
 	<AiArchitecture />
-	<UseCase client:load />
+	<UseCaseWrapper />
 	<BuildAi />
 	<GenerativeAi />
 	<CaseStudy />
-	<Customers client:load />
+	<CustomersWrapper />
 	<ClosingHero />
 	<Footer />
 </Layout>

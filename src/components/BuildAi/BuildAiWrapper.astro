@@ -1,8 +1,7 @@
 ---
 import Button from "../Button/Button";
 import SectionHeader from "../SectionHeader/SectionHeader";
-
-
+import ActiveLabel from "./ActiveLabel";
 ---
 
 <div class="container">
@@ -33,8 +32,7 @@ import SectionHeader from "../SectionHeader/SectionHeader";
             <h3 class="text-3xl xl:text-4xl mb-2 text-white">Data Labeling</h3>
             <p>The best quality data to fuel the best performing models</p>
             <div class="w-full  overflow-x-auto disableScroll">
-                <slot name="dataLabeling"></slot>
-             
+              <ActiveLabel client:load />
             </div>
             <p class="my-8 text-[#F5F5F5]">
               Scale has pioneered in the data labeling industry by combining AI-based techniques

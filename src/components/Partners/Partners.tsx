@@ -19,6 +19,7 @@ import koch from '../../img/koch.png';
 
 import './Partners.css';
 import SponsorsSwiper from './SponsorSwiper';
+// import { Image } from '@astrojs/image/components';
 
 type PartnerCategory = 'Generative AI Companies' | 'U.S. Government Agencies' | 'Enterprises';
 
@@ -73,7 +74,6 @@ const Partners: React.FC = () => {
       });
     }, 5000);
 
-    // Clean up the interval on component unmount
     return () => clearInterval(interval);
   }, []);
 
@@ -84,7 +84,7 @@ const Partners: React.FC = () => {
   return (
     <div className="container mx-auto">
       <div className="pt-6 pb-12 sm:pb-16 sm:pt-20 xl:pb-16 xl:pt-24 text-center">
-        <p className="md:flex hidden items-center justify-center">
+        <p className="flex items-center justify-center flex-wrap">
           Scale works with{' '}
           {partnerCategories.map((category) => (
             <button
@@ -96,25 +96,17 @@ const Partners: React.FC = () => {
             </button>
           ))}
         </p>
-        <p className="flex md:hidden items-center justify-center flex-wrap">
-          Scale works with{' '}
-          {partnerCategories.map((category) => (
-            <span key={category} className="category-button">
-              {category}
-            </span>
-          ))}
-        </p>
       </div>
-      <div className="w-full mb-4 hidden md:flex">
-        <ul className="flex h-[35px] items-center justify-between gap-6 w-full">
+      <div className="w-full mb-4 flex">
+        <ul className="flex md:h-[35px] h-[20px] items-center justify-between md:gap-6 gap-2 w-full">
           {sponsors[activeCategory].map((sponsor, index) => (
             <li key={index} className="h-full">
               <img src={sponsor.src} alt={sponsor.alt} className="h-full" />
+              {/* <Image src={sponsor.src} alt={sponsor.alt} width={400} height={300} /> */}
             </li>
           ))}
         </ul>
       </div>
-      <SponsorsSwiper allSponsors={allSponsors} />
     </div>
   );
 };

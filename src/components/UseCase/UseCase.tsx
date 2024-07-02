@@ -1,15 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { providerImg, useCaseData } from './UsecaseData';
 import UsecaseCard from './UsecaseCard';
-import wholeModel1 from '../../img/rlhf.png';
-import wholeModel2 from '../../img/foundation-models.png';
-import wholeModel3 from '../../img/data-engine.png';
-import wholeModelAllActive from '../../img/whole-model.png';
 import TechTalkSwiper from '../TechTalk/TechTalkSwiper';
 
-const images = [wholeModel1, wholeModel2, wholeModel3, wholeModelAllActive];
-
-const UseCase = () => {
+const UseCase = ({ imageUrls }: { imageUrls: string[] }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [allActive, setAllActive] = useState(false);
 
@@ -18,17 +12,21 @@ const UseCase = () => {
       setActiveIndex((prevIndex) => {
         if (prevIndex === useCaseData.length - 1) {
           setAllActive(true);
-          return prevIndex;
+          return 0;
+        } else if (prevIndex === 0 && allActive) {
+          setAllActive(false);
+          return 0;
         } else {
+          setAllActive(false);
           return prevIndex + 1;
         }
       });
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [allActive]);
 
-  const handleHover = (index: number) => {
+  const handleHover = (index: React.SetStateAction<number>) => {
     setActiveIndex(index);
     setAllActive(false);
   };
@@ -49,7 +47,7 @@ const UseCase = () => {
         </div>
         <div className="flex items-center justify-center">
           <img
-            src={allActive ? images[images.length - 1].src : images[activeIndex].src}
+            src={allActive ? imageUrls[imageUrls.length - 1] : imageUrls[activeIndex]}
             alt="whole model"
             className="w-[80%] h-full"
           />

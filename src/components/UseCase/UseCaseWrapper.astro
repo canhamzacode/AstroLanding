@@ -1,0 +1,20 @@
+---
+import { getImage } from 'astro:assets';
+import UseCase from './UseCase';
+
+import wholeModel1 from '../../img/rlhf.png';
+import wholeModel2 from '../../img/foundation-models.png';
+import wholeModel3 from '../../img/data-engine.png';
+import wholeModelAllActive from '../../img/whole-model.png';
+
+const optimizedImages = await Promise.all([
+  getImage({ src: wholeModel1, width: 800 }),
+  getImage({ src: wholeModel2, width: 800 }),
+  getImage({ src: wholeModel3, width: 800 }),
+  getImage({ src: wholeModelAllActive, width: 800 })
+]);
+
+const imageUrls = optimizedImages.map(img => img.src);
+---
+
+<UseCase imageUrls={imageUrls} client:load />

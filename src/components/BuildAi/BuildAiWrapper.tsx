@@ -22,8 +22,8 @@ const BuildAiWrapper = () => {
         <div className="grid gap-40">
           <div className="grid md:grid-cols-2 grid-cols-1 items-center justify-center gap-8">
             <div className="rounded-md ">
-              <img src={rlhfImg.src} alt="rlhf" />
-              <slot name="rlhfImage"></slot>
+              {/* <img src={rlhfImg.src} alt="rlhf" /> */}
+              <slot name="rlhfImage" />
             </div>
             <div>
               <h3 className="text-3xl xl:text-4xl mb-2 text-white">RLHF</h3>
@@ -68,7 +68,7 @@ const BuildAiWrapper = () => {
           </div>
           <div className="grid md:grid-cols-2 grid-cols-1 items-center justify-center gap-8">
             <div className="rounded-md">
-              <img src={dataCuration.src} alt="rlhf" />
+              {/* <img src={dataCuration.src} alt="rlhf" /> */}
               <slot name="dataCuration"></slot>
             </div>
             <div>

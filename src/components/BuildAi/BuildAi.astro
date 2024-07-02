@@ -1,16 +1,21 @@
 ---
-import BuildAiWrapper from './BuildAiWrapper';
+import BuildAiWrapper from './BuildAiWrapper.astro';
 import { Image } from 'astro:assets';
 import dataCuration from "../../img/data-curation.png";
 import rlhfImg from "../../img/rlhfImg.png";
+import useLabel from '../../hooks/useLabel';
+// const {activeLabel, handleLabelClick} = useLabel();
 
 ---
 
 <BuildAiWrapper>
   <div slot="rlhfImage">
-    <Image src={rlhfImg} alt="rlhf" width={500} height={300} />
+    <Image src={rlhfImg} alt="rlhf" slot="rlhfImage" />
+  </div>
+  <div slot="activeLabel">
+    <p>3D</p>
   </div>
   <div slot="dataCuration">
-    <Image src={dataCuration} alt="data curation" width={500} height={300} />
+    <Image src={dataCuration} alt="data curation" />
   </div>
 </BuildAiWrapper>
