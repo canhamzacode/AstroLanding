@@ -22,4 +22,27 @@ export const useCaseData = [
   }
 ];
 
+export const allUseCaseData = [
+  {
+    title: 'Enterprise GenAI Platform',
+    description:
+      'The only full-stack GenAI Platform for your Enterprise, powered by the Scale Data Engine.'
+  },
+  {
+    title: 'Fine-Tuning and RLHF',
+    description:
+      'Adapt best-in-class foundation models to your business and your specific data to build sustainable, successful AI programs and data from your enterprise.'
+  },
+  {
+    title: 'Foundation Models',
+    description:
+      'Scale partners or integrates with all of the leading AI models, from open-source to closed-source, including OpenAI, Anthropic, Google PaLM, Cohere, and more.'
+  },
+  {
+    title: 'Enterprise Data',
+    description:
+      "Scale's Data Engine enables you to integrate your enterprise data into the fold of these models, providing the base for long-term strategic differentiation."
+  }
+];
+
 export const providerImg = [openai, adept, meta, cohere, anthropic];

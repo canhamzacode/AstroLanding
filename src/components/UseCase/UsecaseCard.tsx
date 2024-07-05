@@ -3,8 +3,8 @@ import React from 'react';
 interface UsecaseCardProp {
   title: string;
   description: string;
-  isActive: boolean;
-  onHover: () => void;
+  isActive?: boolean;
+  onHover?: () => void;
 }
 
 const UsecaseCard = ({ title, description, isActive, onHover }: UsecaseCardProp) => {

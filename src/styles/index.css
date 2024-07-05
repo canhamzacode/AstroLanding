@@ -75,3 +75,11 @@ li {
 .disableScroll::-webkit-scrollbar {
   display: none; /* Hide scrollbar */
 }
+
+.swiper-pagination-bullet {
+  @apply px-1 bg-white h-1 rounded !important;
+}
+
+.swiper-pagination-bullet-active {
+  @apply px-3 !important;
+}

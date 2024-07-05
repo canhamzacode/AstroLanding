@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { providerImg, useCaseData } from './UsecaseData';
 import UsecaseCard from './UsecaseCard';
 import TechTalkSwiper from '../TechTalk/TechTalkSwiper';
+import UsecaseSwipper from './UsecaseSwipper';
 
 const UseCase = ({ imageUrls }: { imageUrls: string[] }) => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -31,9 +32,14 @@ const UseCase = ({ imageUrls }: { imageUrls: string[] }) => {
     setAllActive(false);
   };
 
+  const usecaseSwipperImages = [
+    imageUrls[imageUrls.length - 1],
+    ...imageUrls.slice(0, imageUrls.length - 1)
+  ];
+
   return (
     <div className="container">
-      <div className="grid md:grid-cols-2 gap-4">
+      <div className="md:grid hidden md:grid-cols-2 gap-4">
         <div className="grid">
           {useCaseData.map((data, index) => (
             <UsecaseCard
@@ -53,6 +59,7 @@ const UseCase = ({ imageUrls }: { imageUrls: string[] }) => {
           />
         </div>
       </div>
+      <UsecaseSwipper imageUrls={usecaseSwipperImages} />
       <div className="md:grid grid-cols-5 gap-5 my-14 hidden">
         {providerImg.map((data, index) => (
           <div
